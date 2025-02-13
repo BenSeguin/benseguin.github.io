@@ -1,0 +1,90 @@
+<!-- 
+TAG DICTIONARY:
+a = URL link
+div = new section
+ul = unordered list
+li = list item
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ben's Portfolio Website</title>
+        <link rel="stylesheet" href="home.css">
+    </head>
+    <body>
+        <!-- NAVIGATION BAR -->
+        <nav class="navbar">
+            <!-- Section name -->
+            <div class="navbar_div">
+                <!-- Title -->
+                <a href="/home.html" id="navbar_title">Benjamin Seguin-Frank</a>
+                <!-- Hamburger button (exclusively in mobile mode) -->
+                <div class="navbar_hamburger" id="navbar_hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <!-- The right menu portion of the navigation bar -->
+                <ul class="navbar_items">
+                    <li class="navbar_item">
+                        <a href="/projects.html" class="navbar_item_link">Projects</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="/contact.html" class="navbar_item_link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- ABOUT SECTION -->
+        <section class="about" id="about">
+            <div class="about_heading">
+                <h1 class="about_heading_text">About Me</h1>
+            </div>
+            <div class="about_text">
+                <p class="about_paragraph">
+                    My name is Benjamin Seguin-Frank, welcome to my website! 
+
+                    Here you can use the navigation bar to view a gallery of my completed projects, as well as get a list of all my personal contacts!
+
+                    But first, a bit about myself:
+
+                    I am a dedicated 4th-year student of Computer Science at Carleton University. I have hands-on experience with programming and computers and have managed several teams to deliver successful software applications on time and within specifications.
+                    
+                    During my studies I have gained practical and technical experience with a variety of software applications and programming languages such as: Java, C,  C++, Postgres, MongoDB, and QMake. The variety of personal and academic projects I have developed have allowed me to hone and improve my skills in these various software applications and make me an ideal candidate for any team.
+
+                    I have experience with 3D Graphics and basic graphics Libraries such as OpenGL. During my Second- and Third-year Game Development courses, I led a small team to design and create 2D and 3D games from scratch using OpenGL. This experience of managing a team has made me proficient in GitHub and version control; as well as other tenants of the Agile management model, such as hosting daily scrum meetings and coordinating our goals for a weekly sprint.
+
+                </p>
+                <div id="profile_image">
+                    <img src="./files/images/IMG_7666.jpg" alt="Profile Image"> 
+                </div>   
+            </div> 
+        </section>
+        <div class="container">
+            <div class="gallery">
+                <figure class="gallery__item gallery__item--1">
+                    <img src="./files/images/IMG_7660.jpg" alt="Gallery image 1" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--2">
+                    <img src="./files/images/IMG_5588.jpg" alt="Gallery image 2" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--3">
+                    <img src="./files/images/IMG_7490.jpg" alt="Gallery image 3" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--4">
+                    <img src="./files/images/IMG_5745.jpg" alt="Gallery image 4" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--5">
+                    <img src="./files/images/IMG_7520.jpg" alt="Gallery image 5" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--6">
+                    <img src="./files/images/IMG_7138.jpg" alt="Gallery image 6" class="gallery__img">
+                </figure>
+            </div>
+        </div>
+        
+        <script src="app.js"></script>
+    </body>
+</html>
