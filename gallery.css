@@ -176,7 +176,7 @@
     left: 0;
     width: 95%;
     cursor: pointer;
-    transform: rotateY(calc(var(--i) * 60deg)) translateZ(400px);
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
     transition: transform 0.3s ease;
 }
 

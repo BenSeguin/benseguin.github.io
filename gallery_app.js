@@ -13,11 +13,11 @@ const images =
 
 let x = 0;
 prevBtn.addEventListener('click', () => {
-    x = x + 60;
+    x = x + 45;
     rotate();
 });
 nextBtn.addEventListener('click', () => {
-    x = x - 60;
+    x = x - 45;
     rotate();
 });
 
