@@ -1,136 +1,558 @@
-<!-- 
-TAG DICTIONARY:
-a = URL link
-div = new section
-ul = unordered list
-li = list item
--->
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ben's Portfolio Website</title>
-        <link rel="stylesheet" href="gallery.css">
-    </head>
-    <body>
-        <!-- NAVIGATION BAR -->
-        <nav class="navbar">
-            <!-- Section name -->
-            <div class="navbar_div">
-                <!-- Title -->
-                <a href="index.html" id="navbar_title">Benjamin Seguin-Frank</a>
-                <!-- Hamburger button (exclusively in mobile mode) -->
-                <div class="navbar_hamburger" id="navbar_hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-                <!-- The right menu portion of the navigation bar -->
-                <ul class="navbar_items">
-                    <li class="navbar_item">
-                        <a href="/contact.html" class="navbar_item_link">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!-- ABOUT SECTION -->
-        <section class="about" id="about">
-            <div class="about_text">
-                <p class="about_paragraph">
-                    My name is Benjamin Seguin-Frank, I am a driven and adaptable junior software developer and computer science specialist. I have hands-on experience working on various software projects in both a professional and academic setting, from my time as a student software developer for the Government of Canada—Employment and Social Services (ESDC) and studying at Carleton University.
 
-At the Government of Canada, I was responsible for automating processes, including aggregating Pension Web Service logs and generating insightful dashboard reports to support decision-making. My ability to quickly adapt to new tools, such as Power BI, Azure DevOps, ELK Stack, Jenkins, Docker, and Kubernetes, and my commitment to producing high-quality solutions contributed significantly to the success of the team’s projects.
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
+  <title>Ben Seguin - Portfolio Website</title>
+  <meta name="description" content="benseguin.ca - one stop shop for all things Ben" />
+</head>
 
-I have experience in a multitude of languages and applications, My technical skills include the following:
-
-- Proficiency in C, C++, C#, Java, Javascript, Python, GDScript, Haskell, Grok and various other programming languages.
-
-- Experience in 3D Graphics/software development using OpenGL and various other 3D Graphics engines (such as Godot and Unity).
-
-- Experience with MySQL, MongoDB, PostGres, and various other Database creation and querying languages,
-
-- proficiency in a multitude of web-based languages such as Javascript, .NET, C#, Node.js, HTML, CSS, and Pug
-
-I have employed these skills to complete many personal and academic projects, furthering my abilities to work on and develop large-scale software applications collaboratively. A full list of my completed projects can be found below.
-
-                </p>
-                <div id="profile_image">
-                    <img src="./files/images/IMG_7666.jpg" alt="Profile Image"> 
-                </div>   
-            </div>
-        </section>
-       <!-- The gallery portion of the page -->
-    <div class = "gallery">
-        <!-- set up each image in the rotating wheel -->
-        <div class="image-container">
-            <span style="--i: 1">
-                <div class = "flex-box-container" >
-                    <a target="_blank" href = "https://failstaff1129.itch.io/dino-run"><img src="./files/gifs/DinoRun.gif" onclick="this.src='./files/gifs/DinoRun.gif'" alt=" Image of my 2D infinite platform game"></a>
-                    <p class = "project_desc">'Dino Run' was a 2D infinite platformer I led a team in developing at the end of my first year in Game Development at Carleton University. The game has a series of unique enemies and power-ups, and the player must navigate the levels in order to maximize their score before dying. The game was programmed using GDScript in the Godot 3.0 game engine. </p>
-                </div>
-            </span>
-            <span style="--i: 2">
-                <div class = "flex-box-container" >
-                    <img src="./files/gifs/submarine2D.gif" onclick="this.src='./files/gifs/submarine2D.gif'" alt="2D Submarine Game Image">
-                    <p class = "project_desc"> 'The Submariner' is a top-down 2D bullet hell style game that I worked with a team on developing at the tail end of my second year in Game Development at Carleton University. The game has many unique enemy and weapon types, as well as powerups and infinite terrain. The game has a final boss, a giant enemy squid that you must defeat in order to finish the game. The game was programmed from scratch using C++ and the OpenGL graphics library.</p>
-                </div>
-            </span>
-            <span style="--i: 3">
-                <div class = "flex-box-container" >
-                    <img src="./files/gifs/Mesh_Simplify.gif" onclick="this.src='./files/gifs/Mesh_Simplify.gif'" alt=" slideshow of the simplification process for my algorithm">
-                    <p class = "project_desc">I created an algorithm to procedurally simplify a 3D mesh using a constructed grid based on the method described by Rossignac and Borrel in their paper on the subject. This was a summative project for my Geometric Processing course, and was programmed using Python, with visualization tools from Olver Van Kaick's custom Python library for use with Meshlab.</p>
-                </div>
-            </span>
-            <span style="--i: 4">
-                <div class = "flex-box-container" >
-                    <img src="./files/images/database_cover.png" onclick="this.src='./files/gifs/database.gif'" alt=" image of the diagram representation of the constructed databased we created">
-                    <p class = "project_desc">For my summative project in 3rd year Databases, I worked with a team in designing and creating a database for organizing and storing information regarding hundreds of soccer games. We created an efficient indexing system that let you query the different sets of data with ease.</p>
-                </div>
-            </span>
-            <span style="--i: 5">
-                <div class = "flex-box-container" >
-                    <img src="./files/gifs/Sakoban.gif" onclick="this.src='./files/gifs/Sakoban.gif'" alt="">
-                    <p class = "project_desc">Sakoban is a top-down 3D block pushing game which recreates the classic game with a modern twist. You must push all the blocks into their designated places in order to complete each level, complete all 3 levels and beat the game! The levels are procedurally generated based on a test file seed, and it is robust to an infinite number of levels. The game was programmed using GDScript in the Godot 4.0 Game Engine.</p>
-                </div>
-            </span>
-            <span style="--i: 6">
-                <div class = "flex-box-container" >
-                    <img src="./files/gifs/submarine3D.gif" onclick="this.src='./files/gifs/submarine3D.gif'" alt="3D Submarine Game Image">
-                    <p class = "project_desc"> 'The Submariner 64' is a 3D exploration game that lets you navigate a 3D environment and collect objects. You need to find all the parts of your submarine in order to repair it and escape to the surface! the game features a fully explorable 3D environment with many complex objects and particle effects, as well as screenspace effects. The game was programmed from scratch using C++ and the OpenGL graphics library.</p>
-                </div>
-            </span>
-            <span style="--i: 7">
-                <div class = "flex-box-container" >
-                    <img src="./files/gifs/gridlocked.gif" onclick="this.src='./files/gifs/submarine3D.gif'" alt="3D Submarine Game Image">
-                    <p class = "project_desc"> 'Gridlocked' is a 2D puzzle-style educational game I designed along with a small team of students at Carleton University. It is designed to teach children in early development about different arithmetic operations, as well as increase visual-spatial reasoning. Each level is a puzzle (much like Sudoku), and you must move/combine different number tiles in order to reach the desired result for each row & column. The game was programmed using GDScript in the Godot 4.0 Game Engine.</p>
-                </div>
-            </span>
-            <span style="--i: 8">
-                <div class = "flex-box-container" >
-                    <img src="./files/gifs/dungeon_warden.gif" onclick="this.src='./files/gifs/submarine3D.gif'" alt="3D Submarine Game Image">
-                    <p class = "project_desc"> 'Dungeon Warden' is a 3D 'Tower Defense' style real-time strategy game. You are a warlord who must defend your dungeon from adventurers who aim to steal your treasure! The game has over 10 dynamic enemy and player troops, who each have unique behaviour and scripting. The game is fully 3D viewed from an isometrix persepctive, with several dungeon layouts/levels. The game was programmed using GDScript in the Godot 4.0 Game Engine.</p>
-                </div>
-            </span>
-        </div>
-        <!-- overlay for the image when clicked and enlarged -->
-        <div class="overlay" id="overlay">
-            <img class="popup-img" id="popup-img" src="" alt="Popup Image">
-        </div>
-        <!-- section for left and right buttons -->
-        <div class="btn-container">
-            <button class="btn" id="prev">
-                <img src = "./files/images/left_arrow.png" alt = "Left" id = "prev_img">
-            </button>
-            <button class="btn" id="next">
-                <img src = "./files/images/right_arrow.png" alt = "Right" id = "next_img">
-            </button>
-        </div>
+<body>
+  <header class="main-header">
+    <div class="main-header__logo-container">
+      <div class="main-header__logo-img-cont">
+        <img
+          src="assets/profile_2.jpg"
+          alt="logo Image" class="main-header__logo-img" />
+      </div>
+      <h4 class="main-header__logo-text">Benjamin Seguin-Frank</h4>
     </div>
-    
-    <script src="/gallery_app.js">
+    <nav class="main-header__navigation">
+      <ul class="main-header__navigation-links">
+        <li class="main-header__navigation-link"><a href="./index.html"> Home </a></li>
+        <li class="main-header__navigation-link"><a href="./index.html#about"> About </a></li>
+        <li class="main-header__navigation-link">
+          <a href="./index.html#projects"> Projects </a>
+        </li>
+        <li class="main-header__navigation-link"><a href="./index.html#contact" href=""> Contact </a></li>
+      </ul>
+    </nav>
+    <div class="main-header__sm-scr-nav-btn">
+      <div class="main-header__sm-scr-nav-btn-line"></div>
+      <div class="main-header__sm-scr-nav-btn-line"></div>
+    </div>
+    <div class="main-header__sm-menu">
+      <div class="main-header__sm-menu-close">
 
-    </script>
-  
-    </body>
+      </div>
+      <ul class="main-header__sm-menu-links">
+        <li>
+          <a class="main-header__sm-menu-link main-header__sm-menu-link--1" name="home-hero">Home</a>
+        </li>
+
+        <li>
+          <a class="main-header__sm-menu-link main-header__sm-menu-link--2" name="about">About</a>
+        </li>
+        <li>
+          <a class="main-header__sm-menu-link main-header__sm-menu-link--3" name="projects">Projects</a>
+        </li>
+        <li>
+          <a class="main-header__sm-menu-link main-header__sm-menu-link--4" name="contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <!-- <button class="btn btn-theme btn-sm">Download CV</button> -->
+  </header>
+
+  <!--Remove or Comment out this theme selector code when you are done with choosing the right color for your theme so this color selector don't appear when you host the site online-->
+  <!--<div class="themeClrSelector">
+    <input placeholder="Color Selector" type="color" value="#1DA1F2" class="themeClrSelector__input" />
+    <img alt="theme color tester" src="https://img.icons8.com/fluent/48/000000/rgb-circle-1.png"
+      class="themeClrSelector__img" />
+  </div> -->
+  <!---->
+
+  <section id="home-hero" class="home-hero">
+    <div class="home-hero__content">
+      <div class="home-hero__info">
+        <h1 class="heading-primary home-hero__heading-primary">
+          <span class="heading-primary__sm"> Hello 👋</span>
+          <span class="heading-primary__main">
+            I'm Benjamin Seguin-Frank! A professional programmer, independant game developer, and Carleton Univeristy Graduate
+          </span>
+        </h1>
+        <a href = "#projects"><button class="btn btn-theme home-hero__btn-theme">Projects</button></a>
+        <a href = "#contact"><button class="btn btn-inv home-hero__btn-theme">Contact</button></a>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="about main-section" style="background-image: url('/assets/profile_3.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+    <div class="main-container">
+      <h2 class="heading-secondary projects__heading-secondary">
+        <span class="heading-secondary__sm"> About </span>
+        </h2>
+      <div class="main-section__content">
+        <div class="about__info">
+          <div class="about__main-info">
+            <h3 class="heading-quaternary about__heading-quaternary">
+              My Story
+            </h3>
+            <p class="text-primary about__text-primary">
+              <span>
+                My name is Benjamin Seguin-Frank. I am a driven and adaptable junior software 
+                developer and computer science specialist. I have hands-on experience working on various 
+                software projects in both a professional and academic setting, from my time as a student 
+                software developer for the Government of Canada—Employment and Social Development (ESDC), 
+                to the years I spent studying at Carleton University. 
+              </span>
+            </p>
+            <a href = "#projects"><button class="btn btn-theme about__btn-theme">Projects</button></a>
+          </div>
+          <div class="about__skill-info">
+            <h3 class="heading-quaternary about__heading-quaternary">
+              My Skills
+            </h3>
+            <ul class="about__skills">
+              <li class="about__skill">C</li>
+              <li class="about__skill">C++</li>
+              <li class="about__skill">Java</li>
+              <li class="about__skill">Python</li>
+              <li class="about__skill">Javascript</li>
+              <li class="about__skill">OpenGL</li>
+              <li class="about__skill">Godot 4.0</li>
+              <li class="about__skill">GIT</li>
+              <li class="about__skill">Azure DevOps</li>
+              <li class="about__skill">Linux</li>
+              <li class="about__skill">Kubernetes</li>
+              <li class="about__skill">Docker</li>
+              <li class="about__skill">PyTorch</li>
+              <li class="about__skill">PostgreSQL</li>
+              <li class="about__skill">PGAdmin</li>
+              <li class="about__skill">Haskell</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="skills-showcase">
+    <ul class="skills-showcase__list">
+      <li class="skills-showcase__list-item">
+        <i class="devicon-html5-plain"></i>
+      </li>
+      <li class="skills-showcase__list-item">
+        <i class="devicon-css3-plain"></i>
+      </li>
+      <li class="skills-showcase__list-item">
+        <i class="devicon-javascript-plain"></i>
+      </li>
+      <li class="skills-showcase__list-item">
+        <i class="devicon-react-original"></i>
+      </li>
+      <li class="skills-showcase__list-item">
+        <i class="devicon-sass-original"></i>
+      </li>
+      <li class="skills-showcase__list-item">
+        <i class="devicon-nodejs-plain"></i>
+      </li>
+      <li class="skills-showcase__list-item">
+        <i class="devicon-git-plain"></i>
+      </li>
+
+      <li class="skills-showcase__list-item">
+        <i class="devicon-android-plain"></i>
+      </li>
+      <li class="skills-showcase__list-item">
+        <i class="devicon-python-plain"></i>
+      </li>
+    </ul>
+  </section>
+  <section id="projects" class="projects main-section">
+    <div class="main-container">
+      <h2 class="heading-secondary projects__heading-secondary">
+        <span class="heading-secondary__sm"> Projects </span>
+        <span class="heading-secondary__main">
+          This is a catalogue of my completed personal projects; from 3D games to social media websites, it's all here.
+        </span>
+      </h2>
+      <div class="main-section__content">
+        <div class="projects__list">
+          <div class="projects__list-item">
+            <div class="projects__list-item-count">
+              <span class="projects__list-item-count-num"> 1 </span>
+              <span class="projects__list-item-count-line"> </span>
+              <span class="projects__list-item-count-end-dot"> </span>
+            </div>
+            <div class="projects__list-item-details">
+              <div class="projects__list-item-img-cont">
+                <img src="/assets/gifs/dungeon_warden.gif" alt="Project Image" class="projects__list-item-img"/>
+              </div>
+              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
+                Real-Time Strategy Game
+              </h3>
+              <!-- <hr class="projects__title-text-divider" /> -->
+
+              <p class="text-primary projects__list-item-text-primary">
+                <span>
+                  'Dungeon Warden' is a 3D 'Tower Defense' style real-time strategy game. You are a warlord who must defend 
+                  your dungeon from adventurers who aim to steal your treasure! The game has over 10 dynamic enemy and player 
+                  troops, who each have unique behaviour and scripting. The game is fully 3D viewed from an isometrix persepctive, 
+                  with several dungeon layouts/levels. The game was programmed using GDScript in the Godot 4.0 Game Engine.
+                </span>
+                <!-- <br />
+                  <br /> -->
+                <span>
+                  A link to the Github Repo for the completed game can be found below.
+                </span>
+              </p>
+              <button onclick="window.location.href='https://github.com/JoeyVilleneuve/4501-Project'" class="btn btn-theme projects__btn-theme">Code Link</button>
+            </div>
+          </div>
+          <div class="projects__list-item projects__list-item--inv">
+            <div class="projects__list-item-details">
+              <div class="projects__list-item-img-cont">
+                <img src="./assets/gifs/gridlocked.gif" alt="Project Image" class="projects__list-item-img" />
+              </div>
+              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
+                Educational Game
+              </h3>
+              <!-- <hr class="projects__title-text-divider" /> -->
+
+              <p class="text-primary projects__list-item-text-primary">
+                <span>
+                  'Gridlocked' is a 2D puzzle-style educational game I designed along with a small team of 
+                  students at Carleton University. It is designed to teach children in early development about different 
+                  arithmetic operations, as well as increase visual-spatial reasoning. Each level is a puzzle (much like 
+                  Sudoku), and you must move/combine different number tiles in order to reach the desired result for each 
+                  row & column. The game was programmed using GDScript in the Godot 4.0 Game Engine.
+                </span>
+                <!-- <br />
+                  <br /> -->
+                <span>
+                  A link to a playable build of the game on Itch.io, and the
+                  Github Repo for the completed game can be found below.
+                </span>
+              </p>
+              <button class="btn btn-theme projects__btn-theme">Live Link</button>
+              <button onclick="window.location.href='https://github.com/JoeyVilleneuve/GridLocked'" class="btn btn-inv projects__btn-inv">Code Link</button>
+            </div>
+            <div class="projects__list-item-count">
+              <span class="projects__list-item-count-num"> 2 </span>
+              <span class="projects__list-item-count-line"> </span>
+              <span class="projects__list-item-count-end-dot"> </span>
+            </div>
+          </div>
+          <div class="projects__list-item">
+            <div class="projects__list-item-count">
+              <span class="projects__list-item-count-num"> 3 </span>
+              <span class="projects__list-item-count-line"> </span>
+              <span class="projects__list-item-count-end-dot"> </span>
+            </div>
+            <div class="projects__list-item-details">
+              <div class="projects__list-item-img-cont">
+                <img src="/assets/gifs/submarine3D.gif" alt="Project Image" class="projects__list-item-img" />
+              </div>
+              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
+                3D Exploration Game
+              </h3>
+              <!-- <hr class="projects__title-text-divider" /> -->
+
+              <p class="text-primary projects__list-item-text-primary">
+                <span>
+                  'The Submariner 64' is a 3D exploration game that lets you navigate a 3D environment 
+                  and collect objects. You need to find all the parts of your submarine in order to repair it 
+                  and escape to the surface! the game features a fully explorable 3D environment with many complex 
+                  objects and particle effects, as well as screenspace effects. The game was programmed from scratch using C++ and the OpenGL graphics library.
+                </span>
+                <!-- <br />
+                  <br /> -->
+                <span>
+                  A link to the Github Repo for the completed game can be found below.
+                </span>
+              </p>
+              <button onclick="window.location.href='https://github.com/Slippo/bjag'" class="btn btn-theme projects__btn-theme">Code Link</button>
+            </div>
+          </div>
+          <div class="projects__list-item projects__list-item--inv">
+            <div class="projects__list-item-details">
+              <div class="projects__list-item-img-cont">
+                <img src="./assets/gifs/Mesh_Simplify.gif" alt="Project Image" class="projects__list-item-img" />
+              </div>
+              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
+                3D Mesh Simplification Algorithm
+              </h3>
+              <!-- <hr class="projects__title-text-divider" /> -->
+
+              <p class="text-primary projects__list-item-text-primary">
+                <span>
+                  I created an algorithm to procedurally simplify a 3D mesh using a constructed 
+                  grid based on the method described by Rossignac and Borrel in their paper on the subject. 
+                  This was a summative project for my Geometric Processing course, and was programmed using Python, 
+                  with visualization tools from Olver Van Kaick's custom Python library for use with Meshlab.
+                </span>
+                <!-- <br />
+                  <br /> -->
+                <span>
+                  A link to the Github Repo for the complete algorithm can be found below.
+                </span>
+              </p>
+              <button class="btn btn-theme projects__btn-theme">Code Link</button>
+            </div>
+            <div class="projects__list-item-count">
+              <span class="projects__list-item-count-num"> 4 </span>
+              <span class="projects__list-item-count-line"> </span>
+              <span class="projects__list-item-count-end-dot"> </span>
+            </div>
+          </div>
+          <div class="projects__list-item">
+            <div class="projects__list-item-count">
+              <span class="projects__list-item-count-num"> 5 </span>
+              <span class="projects__list-item-count-line"> </span>
+              <span class="projects__list-item-count-end-dot"> </span>
+            </div>
+            <div class="projects__list-item-details">
+              <div class="projects__list-item-img-cont">
+                <img src="./assets/gifs//submarine2D.gif" alt="Project Image" class="projects__list-item-img" />
+              </div>
+              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
+                2D Infinite Shooter Game
+              </h3>
+              <!-- <hr class="projects__title-text-divider" /> -->
+
+              <p class="text-primary projects__list-item-text-primary">
+                <span>
+                  'The Submariner' is a top-down 2D bullet hell style game that I worked with a team 
+                  on developing at the tail end of my second year in Game Development at Carleton University. 
+                  The game has many unique enemy and weapon types, as well as powerups and infinite terrain. 
+                  The game has a final boss, a giant enemy squid that you must defeat in order to finish the game. 
+                  The game was programmed from scratch using C++ and the OpenGL graphics library.
+                </span>
+                <!-- <br />
+                  <br /> -->
+                <span>
+                  A link to the Github Repo for the completed game can be found below.
+                </span>
+              </p>
+              <button onclick="window.location.href='https://github.com/SubmarineGame/main'" class="btn btn-theme projects__btn-theme">
+                Code Link
+              </button>
+            </div>
+          </div>
+          <div class="projects__list-item projects__list-item--inv">
+            <div class="projects__list-item-details">
+              <div class="projects__list-item-img-cont">
+                <img src="./assets/gifs/Sakoban.gif" alt="Project Image" class="projects__list-item-img" />
+              </div>
+              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
+                2.5D Puzzle Game
+              </h3>
+              <!-- <hr class="projects__title-text-divider" /> -->
+
+              <p class="text-primary projects__list-item-text-primary">
+                <span>
+                  Sakoban is a top-down 2.5D block pushing game which recreates the classic game with a modern twist. 
+                  You must push all the blocks into their designated places in order to complete each level, 
+                  complete all 3 levels and beat the game! The levels are procedurally generated based on a test file seed,
+                   and it is robust to an infinite number of levels. The game was programmed using GDScript in the Godot 
+                   4.0 Game Engine.
+                </span>
+                <!-- <br />
+                  <br /> -->
+                <span>
+                  A button to a playable build of the game on Itch.io, and the
+                  Github Repo for the completed game can be found below.
+                </span>
+              </p>
+              <button class="btn btn-theme projects__btn-theme">
+                Live Link
+              </button>
+              <button onclick="window.location.href='https://github.com/SubmarineGame/main'" class="btn btn-inv projects__btn-inv">Code Link</button>
+            </div>
+            <div class="projects__list-item-count">
+              <span class="projects__list-item-count-num"> 6 </span>
+              <span class="projects__list-item-count-line"> </span>
+              <span class="projects__list-item-count-end-dot"> </span>
+            </div>
+          </div>
+          <div class="projects__list-item">
+            <div class="projects__list-item-count">
+              <span class="projects__list-item-count-num"> 7 </span>
+              <span class="projects__list-item-count-line"> </span>
+              <span class="projects__list-item-count-end-dot"> </span>
+            </div>
+            <div class="projects__list-item-details">
+              <div class="projects__list-item-img-cont">
+                <img src="./assets/gifs/database.gif" alt="Project Image" class="projects__list-item-img" />
+              </div>
+              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
+                Football Database (PostgreSQL)
+              </h3>
+              <!-- <hr class="projects__title-text-divider" /> -->
+
+              <p class="text-primary projects__list-item-text-primary">
+                <span>
+                  For my end of year project in COMP 3005 (Database Management Systems), I worked with a team in designing 
+                  and creating a database for organizing and storing information regarding hundreds of 
+                  soccer games. We created an efficient indexing system that let you query the different sets 
+                  of data with ease.
+                </span>
+                <!-- <br />
+                  <br /> -->
+                <span>
+                  A link to the Github Repo for the completed database can be found below.
+                </span>
+              </p>
+              <button class="btn btn-theme projects__btn-theme">
+                Live Link
+              </button>
+              <button class="btn btn-inv projects__btn-inv">Code Link</button>
+            </div>
+          </div>
+          <div class="projects__list-item projects__list-item--inv">
+            <div class="projects__list-item-details">
+              <div class="projects__list-item-img-cont">
+                <img src="./assets/gifs/social_media.gif" alt="Project Image" class="projects__list-item-img" />
+              </div>
+              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
+                Art Gallery Social Media
+              </h3>
+              <!-- <hr class="projects__title-text-divider" /> -->
+
+              <p class="text-primary projects__list-item-text-primary">
+                <span>
+                  For my end of year summative project in COMP 2406 (Fundamentals of Web Applications) I designed and
+                  implemented a fully functioning robust Art Gallery social media website. I constructed the platform so that
+                  multiple artists and viewers could have accounts to post art, host workshops, and subscribe to other artists to
+                  view their work. I used MongoDB to store the user data and account info, alongside Express and Node.js to retrieve info from both 
+                  the server and client.
+                </span>
+                <!-- <br />
+                  <br /> -->
+                <span>
+                  Below is a link to the video demonstration of the social media website.
+                </span>
+              </p>
+              <button onclick="window.location.href='https://youtu.be/ihF7ECKjwe0'" class="btn btn-theme projects__btn-theme">
+                Demonstration Link
+              </button>
+            </div>
+            <div class="projects__list-item-count">
+              <span class="projects__list-item-count-num"> 8 </span>
+              <span class="projects__list-item-count-line"> </span>
+              <span class="projects__list-item-count-end-dot"> </span>
+            </div>
+          </div>
+          <div class="projects__list-item">
+            <div class="projects__list-item-count">
+              <span class="projects__list-item-count-num"> 9 </span>
+              <span class="projects__list-item-count-line"> </span>
+              <span class="projects__list-item-count-end-dot"> </span>
+            </div>
+            <div class="projects__list-item-details">
+              <div class="projects__list-item-img-cont">
+                <img src="./assets/gifs/DinoRun.gif" alt="Project Image" class="projects__list-item-img" />
+              </div>
+              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
+                2D Infinite Runner Game
+              </h3>
+              <!-- <hr class="projects__title-text-divider" /> -->
+
+              <p class="text-primary projects__list-item-text-primary">
+                <span>
+                  'Dino Run' is a 2D infinite platformer I led a team in developing at the end 
+                  of my first year in Game Development at Carleton University. 
+                  The game has a series of unique enemies and power-ups, and the player must navigate the levels 
+                  in order to maximize their score before dying. The game was programmed using GDScript in the Godot 
+                  3.0 game engine.
+                </span>
+                <!-- <br />
+                  <br /> -->
+                <span>
+                  A link to a playable build of the game on Itch.io, and the
+                  Github Repo for the completed game can be found below.
+                </span>
+              </p>
+              <button onclick="window.location.href='https://failstaff1129.itch.io/dino-run'" class="btn btn-theme projects__btn-theme">
+                Live Link
+              </button>
+              <button class="btn btn-inv projects__btn-inv">Code Link</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact main-section">
+    <div class="main-container">
+      <h2 class="heading-secondary">
+        <span class="heading-secondary__sm"> Contact </span>
+        <span class="heading-secondary__main">
+          Feel free to Contact me by submitting the form below and I will get back to you as soon as possible
+        </span>
+      </h2>
+      <div class="main-section__content">
+        <div class="contact__form-cont">
+          <form class="contact__form">
+            <div class="contact__form-field">
+              <label for="name" class="contact__form-field-label">Name</label>
+              <input placeholder="Enter Your Name" type="text" class="contact__form-field-input" />
+            </div>
+            <div class="contact__form-field">
+              <label for="name" class="contact__form-field-label">Email</label>
+              <input placeholder="Enter Your Email" type="text" class="contact__form-field-input" />
+            </div>
+            <div class="contact__form-field">
+              <label for="name" class="contact__form-field-label">Message</label>
+              <textarea placeholder="Enter Your Message" name="message" id="" cols="30" rows="10"
+                class="contact__form-field-input"></textarea>
+            </div>
+            <button type="submit" class="contact__form-submit">Submit</button>
+          </form>
+          <div class="contact__form-visual"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="main-footer">
+    <div class="main-footer__upper">
+      <div class="main-container">
+        <ul class="main-footer__links">
+          <li class="main-footer__link">
+            <a href="./index.html">Home</a>
+          </li>
+          <li class="main-footer__link">
+            <a href="./index.html#about">About</a>
+          </li>
+          <li class="main-footer__link">
+            <a href="./index.html#projects">Projects</a>
+          </li>
+          <li class="main-footer__link">
+            <a href="./index.html#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="main-footer__mid-line"></div>
+        <div class="main-footer__socials">
+          <a href="https://github.com/BenSeguin" class="main-footer__social-link">
+            <img
+              src="https://d33wubrfki0l68.cloudfront.net/5557d5a11584d7201a38ee1a95200f57a4cc0f88/15085/assets/png/github-ico.png"
+              alt="" class="main-footer__social-link-icon" />
+          </a>
+          <a href="https://www.instagram.com/_failstaff?igsh=ODkyYXdpZTd6djQw&utm_source=qr" class="main-footer__social-link">
+            <img src="./assets/icons8-instagram-48.png" alt="" class="main-footer__social-link-icon" />
+          </a>
+          <a href="https://x.com/fail_staff?s=21&t=lIrPqtUW--Lfq_kVe4Lc3g" class="main-footer__social-link">
+            <img src="./assets/x_logo_PNG3.png" alt="" class="main-footer__social-link-icon" />
+          </a>
+          <a href="https://www.linkedin.com/in/benjamin-seguin-frank/" class="main-footer__social-link">
+            <img
+              src="https://d33wubrfki0l68.cloudfront.net/7f29579dde49e02480372aa49f7189c5536b0118/34b92/assets/png/linkedin-ico.png"
+              alt="" class="main-footer__social-link-icon" />
+          </a>
+          <a href="https://failstaff1129.itch.io/" class="main-footer__social-link">
+            <img src="./assets/itch-icon.png" alt="" class="main-footer__social-link-icon" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+
 </html>
